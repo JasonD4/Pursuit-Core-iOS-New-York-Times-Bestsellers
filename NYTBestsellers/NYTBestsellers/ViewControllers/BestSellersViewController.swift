@@ -18,7 +18,6 @@ class BestSellersViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 //        self.tabBarItem = UITabBarItem.init(title: <#T##String?#>, image: <#T##UIImage?#>, tag: <#T##Int#>)
-//        self.tabBarItem.title = "Best Sellers"
         view.addSubview(uiSetup)
         uiSetup.collectionOfBooks.dataSource = self
         uiSetup.collectionOfBooks.register(BestSellingCollectionViewCell.self, forCellWithReuseIdentifier: "BestSelling")
@@ -35,6 +34,11 @@ extension BestSellersViewController: UICollectionViewDataSource{
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = uiSetup.collectionOfBooks.dequeueReusableCell(withReuseIdentifier: "BestSelling", for: indexPath) as? BestSellingCollectionViewCell else { return UICollectionViewCell() }
+        cell.bestWeekSellerLabel.text = "test"
+        cell.bookDescription.text = "test"
+        cell.bookDescription.isEditable = false
+        cell.picture.image = UIImage.init(named: "myPlaceHolder")
+        cell.picture.backgroundColor = .blue
         return cell
     }
 

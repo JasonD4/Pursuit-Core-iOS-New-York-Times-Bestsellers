@@ -29,6 +29,7 @@
 		96FEA57E21FBB88B00565B60 /* FavoriteUISetupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96FEA57D21FBB88B00565B60 /* FavoriteUISetupView.swift */; };
 		96FEA58021FBBB6A00565B60 /* FavoriteCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96FEA57F21FBBB6A00565B60 /* FavoriteCollectionViewCell.swift */; };
 		96FEA58221FBC82E00565B60 /* SettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96FEA58121FBC82E00565B60 /* SettingView.swift */; };
+		96FEA58421FC5A4800565B60 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96FEA58321FC5A4800565B60 /* DetailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,6 +57,7 @@
 		96FEA57D21FBB88B00565B60 /* FavoriteUISetupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteUISetupView.swift; sourceTree = "<group>"; };
 		96FEA57F21FBBB6A00565B60 /* FavoriteCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteCollectionViewCell.swift; sourceTree = "<group>"; };
 		96FEA58121FBC82E00565B60 /* SettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingView.swift; sourceTree = "<group>"; };
+		96FEA58321FC5A4800565B60 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -154,6 +156,7 @@
 			isa = PBXGroup;
 			children = (
 				96FEA57921FBA96C00565B60 /* CollectionOfUISetUpView.swift */,
+				96FEA58321FC5A4800565B60 /* DetailView.swift */,
 				96FEA57D21FBB88B00565B60 /* FavoriteUISetupView.swift */,
 				96FEA58121FBC82E00565B60 /* SettingView.swift */,
 				96FEA56F21FB985400565B60 /* MainTabBarController.swift */,
@@ -252,6 +255,7 @@
 				5718BFFC21FA763200A8E4B8 /* String+DateExtensions.swift in Sources */,
 				96FEA57A21FBA96C00565B60 /* CollectionOfUISetUpView.swift in Sources */,
 				96FEA57C21FBAD8500565B60 /* BestSellingCollectionViewCell.swift in Sources */,
+				96FEA58421FC5A4800565B60 /* DetailView.swift in Sources */,
 				5718C00221FA772600A8E4B8 /* AppError.swift in Sources */,
 				96FEA57621FB9F2F00565B60 /* TypeModel.swift in Sources */,
 				96FEA57021FB985400565B60 /* MainTabBarController.swift in Sources */,

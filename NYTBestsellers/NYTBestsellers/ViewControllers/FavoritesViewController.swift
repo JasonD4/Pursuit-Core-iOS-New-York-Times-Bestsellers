@@ -30,6 +30,9 @@ extension FavoritesViewController: UICollectionViewDataSource{
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = favoriteSetup.collectionOfFavorites.dequeueReusableCell(withReuseIdentifier: "Favorites", for: indexPath) as? FavoriteCollectionViewCell else {return UICollectionViewCell()}
+        cell.bookDescription.text = "test"
+        cell.picture.image = UIImage.init(named: "myPlaceHolder")
+        cell.bestWeekSellerLabel.text = "test"
     return cell
     }
     
