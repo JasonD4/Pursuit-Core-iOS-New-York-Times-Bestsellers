@@ -11,11 +11,11 @@ import Foundation
 
 
 
-struct TypeModel {
-   let results: [Type]
+struct CatagoryModel: Decodable {
+   let results: [Catagory]
 }
 
-struct Type {
+struct Catagory: Decodable {
     let list_name: String
     let display_name: String
     let oldest_published_date: String

@@ -29,7 +29,7 @@ class CollectionOfUISetUpView: UIView {
     lazy var collectionOfBooks: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .horizontal
-        layout.itemSize = CGSize(width: 200, height: 300)
+        layout.itemSize = CGSize(width: 300, height: 300)
         let collection = UICollectionView(frame: CGRect.zero, collectionViewLayout: layout)
         collection.backgroundColor = .magenta
         return collection
@@ -50,6 +50,7 @@ class CollectionOfUISetUpView: UIView {
         collectionOfBooks.leadingAnchor.constraint(equalTo: leadingAnchor).isActive = true
 
         collectionOfBooks.heightAnchor.constraint(equalTo: safeAreaLayoutGuide.heightAnchor, multiplier: 0.5).isActive = true
+        
     }
     func setConstrainsForPicker(){
                 addSubview(pickCatagory)

@@ -34,28 +34,25 @@ class FavoriteCollectionViewCell: UICollectionViewCell {
     
     lazy var bookDescription: UITextView = {
         let textView = UITextView()
-        
+        textView.isEditable = false
         
         return textView
     }()
     
     lazy var optionButtons: UIButton = {
         let button = UIButton()
-        let alert = UIAlertController(title: "Options", message: "", preferredStyle: .actionSheet)
-        alert.addAction(UIAlertAction.init(title: "delete", style: .destructive){(deleter) in
-            
-            
-        })
-        
-        
-        
+        button.setTitle("...", for: .normal)
+        button.backgroundColor = .black
     return button
     }()
+    
+  
     
     private func commonInit(){
         pictureConstraint()
         labelConstraint()
         bookText()
+        option()
     }
     
     func pictureConstraint(){
@@ -85,9 +82,12 @@ class FavoriteCollectionViewCell: UICollectionViewCell {
     }
     
     func option(){
+        addSubview(optionButtons)
         optionButtons.translatesAutoresizingMaskIntoConstraints = false
-        optionButtons.topAnchor.constraint(equalTo: topAnchor, constant: 20)
-        optionButtons.rightAnchor.constraint(equalTo: rightAnchor, constant: 20)
+        optionButtons.topAnchor.constraint(equalTo: topAnchor, constant: 0).isActive = true
+        optionButtons.rightAnchor.constraint(equalTo: rightAnchor, constant: 0).isActive = true
+       
+
     }
 
 }

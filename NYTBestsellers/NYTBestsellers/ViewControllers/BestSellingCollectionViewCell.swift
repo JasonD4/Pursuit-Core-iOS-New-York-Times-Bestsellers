@@ -10,6 +10,7 @@ import UIKit
 
 class BestSellingCollectionViewCell: UICollectionViewCell {
 
+    var collectionView = CollectionOfUISetUpView()
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -29,13 +30,14 @@ class BestSellingCollectionViewCell: UICollectionViewCell {
     
     lazy var bestWeekSellerLabel: UILabel = {
         let label = UILabel()
+        label.numberOfLines = 0
         
         return label
     }()
     
     lazy var bookDescription: UITextView = {
         let textView = UITextView()
-        
+        textView.isEditable = false
         
         return textView
     }()
@@ -51,17 +53,17 @@ class BestSellingCollectionViewCell: UICollectionViewCell {
         picture.translatesAutoresizingMaskIntoConstraints = false
         picture.centerXAnchor.constraint(equalTo: centerXAnchor).isActive = true
 //        picture.centerYAnchor.constraint(equalTo: safeAreaLayoutGuide.centerYAnchor).isActive = true
-        picture.topAnchor.constraint(equalTo: topAnchor, constant: 10).isActive = true
-        picture.heightAnchor.constraint(equalToConstant: 120).isActive = true
-        picture.widthAnchor.constraint(equalToConstant: 120).isActive = true
+        picture.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 10).isActive = true
+        picture.heightAnchor.constraint(equalToConstant: 175).isActive = true
+        picture.widthAnchor.constraint(equalToConstant: 150).isActive = true
     }
     
     func labelConstraint(){
         addSubview(bestWeekSellerLabel)
         bestWeekSellerLabel.translatesAutoresizingMaskIntoConstraints = false
         bestWeekSellerLabel.topAnchor.constraint(equalTo: picture.bottomAnchor).isActive = true
-        bestWeekSellerLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -20)
-        bestWeekSellerLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 20)
+        bestWeekSellerLabel.trailingAnchor.constraint(equalTo: collectionView.collectionOfBooks.trailingAnchor, constant: 20)
+        bestWeekSellerLabel.leadingAnchor.constraint(equalTo: collectionView.collectionOfBooks.leadingAnchor, constant: 20)
     }
     
     func bookText(){
@@ -73,16 +75,6 @@ class BestSellingCollectionViewCell: UICollectionViewCell {
         bookDescription.leadingAnchor.constraint(equalTo: leadingAnchor).isActive = true
     }
 
-//
-    
-    
-//        picture.translatesAutoresizingMaskIntoConstraints = false
-//        picture.topAnchor.constraint(equalTo: topAnchor,constant: 11).isActive = true
-//        pickCatagory.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor).isActive = true
-//        pickCatagory.trailingAnchor.constraint(equalTo: trailingAnchor).isActive = true
-//        pickCatagory.leadingAnchor.constraint(equalTo: leadingAnchor).isActive = true
-//    }
-//        button.addTarget(self, action: #selector(), for: .touchUpInside)
         
     
 }
