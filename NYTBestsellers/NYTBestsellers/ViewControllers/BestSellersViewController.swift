@@ -35,7 +35,7 @@ class BestSellersViewController: UIViewController {
         super.viewDidLoad()
 
      updateinfo()
-        
+        userLeftOfOn()
 //        self.tabBarItem = UITabBarItem.init(title: <#T##String?#>, image: <#T##UIImage?#>, tag: <#T##Int#>)
         view.addSubview(uiSetup)
         
@@ -47,28 +47,30 @@ class BestSellersViewController: UIViewController {
     }
     
    private func updateinfo(){
-    
-    BookAPI.typeData { (error, book) in
-        if let error = error{
-            print(error)
-        }
-        if let book = book{
-            self.books = book
-        }
-    }
-    
     CatagoryAPI.typeData { (error, catagory) in
         if let error = error{
             print(error)
-        }
+            }
         if let catagory = catagory{
             self.pickerCatagory = catagory
             
+            }
         }
     }
-    }
     
-
+    func userLeftOfOn(){
+        if let defaults = UserDefaults.standard.string(forKey: userDefault.key){
+            BookAPI.catagory = defaults
+            BookAPI.typeData { (error, book) in
+                if let error = error{
+                    print(error)
+                }
+                if let book = book{
+                    self.books = book
+                }
+            }
+        }
+    }
 
 }
 
@@ -102,7 +104,7 @@ extension BestSellersViewController: UICollectionViewDataSource{
         
     
     
-        cell.bestWeekSellerLabel.text = books[indexPath.row].book_details[0].title
+        cell.bestWeekSellerLabel.text = "\(books[indexPath.row].weeks_on_list) weeks on best seller "
         cell.bookDescription.text = books[indexPath.row].book_details[0].description
         cell.bookDescription.isEditable = false
         cell.picture.image = UIImage.init(named: "myPlaceHolder")

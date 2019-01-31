@@ -27,7 +27,7 @@ class BestDetailViewController: UIViewController {
     
     
     func theUpdateTheUI(){
-        detailsviewSetUp.bestWeekSellerLabel.text = book?.author
+        detailsviewSetUp.bestWeekSellerLabel.text = "Author: \(book?.author ?? "No Author")"
         detailsviewSetUp.picture.image = UIImage.init(named: "myPlaceHolder")
         detailsviewSetUp.bookDescription.text = book?.description
         
